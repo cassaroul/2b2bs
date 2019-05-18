@@ -1,0 +1,68 @@
+body {
+background-color: lavender;
+}
+padding: 25px;
+}
+h1 {
+color: slateblue;
+}
+p {
+color: midnightblue;
+}
+.red{
+	color:red;}
+.orange{
+	color:orange;}
+.pink{
+	color:#FF35C2;}
+.turquoise{
+	color:#EAD;}
+.magenta{
+    color:magenta;}
+.slateblue{
+	color:slateblue;}
+.yellow{
+	color:#fff847;}
+.green{
+	color:#53ef70;}
+.white{
+	color:#ffffff;}
+.table{
+  margin: auto;
+  width: 66%;
+  padding: 10px;
+  border-radius: 100px;
+  text-align: center;
+  background: -webkit-linear-gradient(top, #f3c5bd 0%,#e86c57 50%,#ea2803 51%,#ff6600 75%,#c72200 100%);
+}
+
+.badvibes{
+  padding: 20px;
+  background-color: #a8a550; 
+  color: white;
+  margin-bottom: 15px;
+}
+.closebtn{
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+	color:red;
+}
+
+.title{
+	color: slateblue;
+}
+.title:hover {
+	color:pink;
+}
+.HERE{
+	color: white;
+}
