@@ -14,15 +14,22 @@ function turn2Red() {
 function turngreen() {
     document.getElementById("rightanswer").style.color = "green";
 }
+function showgoodvibes() {
+	document.getElementById("goodvibes").style.display = "block";
+	document.getElementById("badvibes").style.display='none';
+}
 </script>
 <link rel="stylesheet" href="test.css">
 <style>
 </style>
 </head>
 <body> 
-<div class="badvibes">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+<div class="badvibes" id="badvibes">
+  <span class="closebtn" onclick="showgoodvibes()">&times;</span> 
   Bad Vibes Present
+</div>
+<div class="goodvibes" id="goodvibes"> 
+  Good Vibes Present 
 </div>
 <div>
 <marquee><h1 class="title" onclick="this.parentElement.style.display='none';"> Too Blessed to Be Stressed </h1></marquee>
