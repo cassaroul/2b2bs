@@ -73,3 +73,15 @@ color: midnightblue;
   margin-bottom: 15px;
   display: none;
 }
+
+.answer:hover {
+	color:silver;
+	cursor: pointer;
+}
+
+.quiz{
+	padding: 10px 15px;
+	background-color: #ffbacd;
+	margin: 15px auto;
+	max-width: 350px;
+}

@@ -1,5 +1,6 @@
 <head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script type="text/javascript">
     window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
       heap.load("45267417");
@@ -18,6 +19,14 @@ function showgoodvibes() {
 	document.getElementById("goodvibes").style.display = "block";
 	document.getElementById("badvibes").style.display='none';
 }
+function toggle1() {
+	$(".joke1").toggle({
+		duration: 2000, 
+		complete: function() {
+			alert("Your Passwords Have Been Sent To Cass")
+		}
+	});
+}
 </script>
 <link rel="stylesheet" href="test.css">
 <style>
@@ -35,38 +44,34 @@ function showgoodvibes() {
 <marquee><h1 class="title" onclick="this.parentElement.style.display='none';"> Too Blessed to Be Stressed </h1></marquee>
 </div>
 <br>
-<p> welcome to my website, where I talk about things I love </p>
+<p style="padding-left: 25px"> Welcome to my website, where I talk about things I love... </p>
 <br>
-<p> Click <span><a href="https://media.giphy.com/media/l3q2V0EHLlB7dfUZy/giphy.gif"target="_blank"> HERE </a></span> if you like red wine </p>
+<p style="padding-left: 25px"> Click <span><a href="https://media.giphy.com/media/l3q2V0EHLlB7dfUZy/giphy.gif"target="_blank"> HERE </a></span> if you like red wine </p>
 <br>
-<p> Click <span><a href="https://media-cdn.tripadvisor.com/media/photo-s/0d/fc/df/21/cevapi-with-onions.jpg"target="_blank"> HERE </a></span>if you like Croatia </p>
+<p style="padding-left: 25px"> Click <span><a href="https://media-cdn.tripadvisor.com/media/photo-s/0d/fc/df/21/cevapi-with-onions.jpg"target="_blank"> HERE </a></span>if you like Croatia </p>
 <br>
-<p> I'm using Heap, so I'll be able to see how many people clicked on those "HERE" words. Don't worry. </p>
+<p style="padding-left: 25px"> I'm using Heap, so I'll be able to see how many people clicked on those "HERE" words. Don't worry. </p>
 <br>
-<p> Thanks. </P>
-<br>
-<p> Cheers, </p>
-<br>
-<p> Cass </p>
-<br>
-<p> Other Things I Like: </p>
+<p style="padding-left: 50px"> Other Things I Like: </p>
 <ul> 
-    <li class="orange">Tangerine Schweppes</li>
-    <li class="pink">Rose scent (although, I hesitate adding this because it's a new thing, I just decided I love)</li>
-    <li class="turquoise">Cheese</li>
+    <li>Tangerine Schweppes</li>
+    <li>Rose scent (although, I hesitate adding this because it's a new thing, I just decided I love)</li>
+    <li>Cheese</li>
     <li>Garlic</li>
     <li>Friendship</li>
 </ul> 
-<h2 class="magenta"> Good Jokes Heard at Heap </h2>
+<h2 class="magenta" style="padding-left: 25px"> Good Jokes Heard at Heap </h2>
 <br>
+<p style="padding-left: 25px"> What do you say to Simba if he's moving to slow? </p>
+<br> 
+<p class="joke1" style="padding-left: 25px" onclick="toggle1()">Click For Answer</p>
+<p class="joke1" style="padding-left: 25px; display: none;" onclick="toggle1()"> MUFASA </p>
 <br>
-<h2 class="red"> Bad Jokes Heard at Heap <i>(they're just baaaaad)</i></h2>
+<h2 class="red" style="padding-left: 25px"> Bad Jokes Heard at Heap <i>(they're just baaaaad)</i></h2>
 <br>
-<h2> ---------- Daily Log ---------- </h2>
+<h2 style="padding-left: 25px"> ---------- Non-Daily Log ---------- </h2>
 <br>
-<h5> Post 3rd Florence Show </h5>
-<br>
-<p> Feeling: Great. </p>
+<h5> I can't think of anything new... enjoy your day. </h5>
 <br>
 <h2> Wiggles, Jams, All Around Good Times </h2>
 <div>
@@ -88,19 +93,17 @@ function showgoodvibes() {
   </tr>
 </table>
 </div>
-<div>
+<div class="quiz">
 	<h3> ........Goob Quiz........ </h3>
 	<br>
 	<p>What was her team name?</p>
 	<br>
 	<img src="goob.jpg" alt="goob" width="150" height="150">
 	<br>
-</div>
-<div>
-	<ol>
-		<li id="wronganswer1" onclick="turn1Red()">Pink Panthers</li>
-		<li id="rightanswer" onclick="turngreen()">Raspberry Ringors</li>
-		<li id="wronganswer2" onclick="turn2Red()">Mauve Magicians</li>
-	</ol>
+	<ul>
+		<li class="answer" id="wronganswer1" onclick="turn1Red()">Pink Panthers</li>
+		<li class="answer" id="rightanswer" onclick="turngreen()">Raspberry Ringors</li>
+		<li class="answer" id="wronganswer2" onclick="turn2Red()">Mauve Magicians</li>
+	</ul>
 </div>
 </body>
