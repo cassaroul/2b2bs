@@ -27,7 +27,7 @@ color: midnightblue;
 	color:#53ef70;}
 .white{
 	color:#ffffff;}
-.table{
+.table1{
   margin: auto;
   width: 66%;
   padding: 10px;
@@ -84,4 +84,17 @@ color: midnightblue;
 	background-color: #ffbacd;
 	margin: 15px auto;
 	max-width: 350px;
+}
+
+.table2 {
+  width: 50%;
+  background: url("https://trgovina.mercator.si/market/img/cache/products/4815/product_medium_image/00568377.jpg") no-repeat;
+}
+
+.tableVisor {
+	margin: auto;
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+  background-color: orange;
 }
