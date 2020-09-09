@@ -98,3 +98,13 @@ color: midnightblue;
   text-align: center;
   background-color: orange;
 }
+
+.introcolumn {
+  float: left;
+  width: 50%;
+}
+
+.introrow:after {
+  display: table;
+  clear: both;
+}
