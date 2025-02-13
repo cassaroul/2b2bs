@@ -1,4 +1,67 @@
 <head>
+	<style>
+    .introrow {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .introcolumn {
+        flex: 1;
+        height: 320px;
+        padding: 20px;
+        background-color: #92d1b6;
+        box-sizing: border-box;
+    }
+
+    .introcolumn a {
+        color: #000;
+        font-weight: bold;
+    }
+
+ .quiz {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, 
+        rgba(255, 0, 0, 0.5),   /* Red */
+        rgba(255, 165, 0, 0.5), /* Orange */
+        rgba(255, 255, 0, 0.5), /* Yellow */
+        rgba(0, 128, 0, 0.5),   /* Green */
+        rgba(0, 0, 255, 0.5),   /* Blue */
+        rgba(75, 0, 130, 0.5),  /* Indigo */
+        rgba(238, 130, 238, 0.5) /* Violet */
+    );
+    color: white;
+    border-radius: 15px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+}
+
+.quiz img {
+    display: block; /* Ensures it's treated as a block for centering */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+.answer {
+    list-style: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.answer:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+</style>
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script type="text/javascript">
@@ -47,28 +110,27 @@ function toggle1() {
 <br>
 <p style="padding-left: 25px"> Welcome to my website, where I talk about things I love... </p>
 <br>
-<div class="introrow"> 
-<div class="introcolumn" style="height:320px; padding: 20px; background-color:#92d1b6">
-	<h2>Links to Some Things I Like</h2>
-	<p style="padding-left: 25px"> Click <span><a href="https://media.giphy.com/media/l3q2V0EHLlB7dfUZy/giphy.gif"target="_blank"> HERE </a></span> if you like red wine </p>
-<br>
-<p style="padding-left: 25px"> Click <span><a href="https://media-cdn.tripadvisor.com/media/photo-s/0d/fc/df/21/cevapi-with-onions.jpg"target="_blank"> HERE </a></span>if you like Croatia </p>
-<br>
-<p style="padding-left: 25px"> I'm using Heap, so I'll be able to see how many people clicked on those "HERE" words. Don't worry. </p>
+<div class="introrow">
+    <div class="introcolumn">
+        <h2>Links to Some Things I Like</h2>
+        <p>Click <a href="https://img.stackshare.io/posts/dan-robinson-heap-1.jpg" target="_blank">HERE</a> if you like dudes named dan</p>
+        <br>
+        <p>Click <a href="https://www.tasteatlas.com/images/recipes/fce63bd4b7574054a1469398a5a11135.jpg?mw=900" target="_blank">HERE</a> if you like Croatia</p>
+        <br>
+    </div>
+
+    <div class="introcolumn">
+        <h2>A List of Other Things I Like</h2>
+        <ul>
+            <li>Tangerine Schweppes</li>
+            <li>Coca-Cola</li>
+            <li>Cheese</li>
+            <li>Garlic</li>
+            <li>Pizza and in-n-out</li>
+        </ul>
+    </div>
 </div>
-<br>
-<div class="introcolumn" style="height:320px; padding: 20px; background-color:#92d1b6">
-	<h2>A List of Other Things I Like</h2>
-	<p>
-		<ul> 
-    		<li>Tangerine Schweppes</li>
-		    <li>Coca-Cola</li>
-		    <li>Cheese</li>
-		    <li>Garlic</li>
-		    <li>Pizza and in-n-out</li>
-		</ul> 
-	</p>
-</div>
+
 </div>
 
 <h2 class="magenta" style="padding-left: 25px"> Good Jokes Heard at Heap </h2>
@@ -77,8 +139,6 @@ function toggle1() {
 <br> 
 <p class="joke1" style="padding-left: 25px" onclick="toggle1()">Click For Answer</p>
 <p class="joke1" style="padding-left: 25px; display: none;" onclick="toggle1()"> MUFASA </p>
-<br>
-<h2 class="red" style="padding-left: 25px"> Bad Jokes Heard at Heap <i>(they're just baaaaad)</i></h2>
 <br>
 <h2 style="padding-left: 25px"> ---------- Non-Daily Log ---------- </h2>
 <br>
@@ -105,17 +165,17 @@ function toggle1() {
 </table>
 </div>
 <div class="quiz">
-	<h3> ........Goob Quiz........ </h3>
-	<br>
-	<p>What was her team name?</p>
-	<br>
-	<img src="goob.jpg" alt="goob" width="150" height="150">
-	<br>
-	<ul>
-		<li class="answer" id="wronganswer1" onclick="turn1Red()">Pink Panthers</li>
-		<li class="answer" id="rightanswer" onclick="turngreen()">Raspberry Ringors</li>
-		<li class="answer" id="wronganswer2" onclick="turn2Red()">Mauve Magicians</li>
-	</ul>
+    <h3> ........Goob Quiz........ </h3>
+    <br>
+    <p>What was her team name?</p>
+    <br>
+    <img src="goob.jpg" alt="goob" width="150" height="150">
+    <br>
+    <ul>
+        <li class="answer" id="wronganswer1" onclick="turn1Red()">Pink Panthers</li>
+        <li class="answer" id="rightanswer" onclick="turngreen()">Raspberry Ringers</li>
+        <li class="answer" id="wronganswer2" onclick="turn2Red()">Mauve Magicians</li>
+    </ul>
 </div>
 </body>
 <div>
